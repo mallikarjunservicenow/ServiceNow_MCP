@@ -43,7 +43,7 @@ import ssl
 from requests import Session
 from requests.auth import HTTPBasicAuth
 
-# Add SOAP support
+# Add SOAP support.
 try:
     SOAP_AVAILABLE = True
 except ImportError:
