@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "servicenow-mcp"
+version = "0.1.0"
+authors = [
+    { name="Veera", email="mallikarjun.servicenow@gmail.com" }
+]
+description = "MCP for ServiceNow"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "fastapi>=0.116.1",
+    "mcp[cli]>=1.12.0",
+    "uvicorn>=0.35.0",
+    "zeep>=4.3.1",
+    "platformdirs>=4.2.2",
+]
+
+[project.scripts]
+servicenow-mcp = "mcp_server_table.main:start"
+servicenow-setup = "mcp_server_table.postinstall:main"
