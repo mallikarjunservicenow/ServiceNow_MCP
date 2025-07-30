@@ -151,8 +151,8 @@ graph TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/divyashah0510/mcp-servicenow-exporter.git
-cd mcp-servicenow-exporter
+git clone https://github.com/mallikarjunservicenow/ServiceNow_MCP
+cd ServiceNow_MCP
 
 # Install dependencies
 pip install -r requirements.txt
@@ -208,8 +208,8 @@ graph LR
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/divyashah0510/mcp-servicenow-exporter.git
-   cd mcp-servicenow-exporter
+   git clone https://github.com/mallikarjunservicenow/ServiceNow_MCP
+   cd ServiceNow_MCP
    ```
 
 2. **Create Virtual Environment**
@@ -270,7 +270,7 @@ To use this MCP server with Claude Desktop, add the following configuration to y
 {
   "mcpServers": {
     "servicenow-client": {
-      "command": "mcp-servicenow-exporter",
+      "command": "servicenow-mcp",
       "args": [],
       "env": {
         "SERVICENOW_INSTANCE": "https://your_instance_id.service-now.com",
@@ -322,7 +322,7 @@ You can customize the MCP server behavior by adding additional environment varia
 {
   "mcpServers": {
     "servicenow-client": {
-      "command": "mcp-servicenow-exporter",
+      "command": "servicenow-mcp",
       "args": ["--verbose", "--max-records=1000"],
       "env": {
         "SERVICENOW_INSTANCE": "https://your-instance.service-now.com",
@@ -405,23 +405,4 @@ The server supports ServiceNow basic authentication. Ensure your ServiceNow user
 2. **Permission denied**: Verify user has table read access
 3. **Large exports**: Use pagination for tables with millions of records
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ---
-
-<div align="center">
-
-**Made with ❤️ for the ServiceNow community**
-
-[⭐ Star this repo](https://github.com/divyashah0510/mcp-servicenow-exporter) • [🐛 Report issues](https://github.com/divyashah0510/mcp-servicenow-exporter/issues) • [💡 Request features](https://github.com/divyashah0510/mcp-servicenow-exporter/issues/new)
-
-</div>
